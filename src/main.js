@@ -1,6 +1,8 @@
 import '../style.css';
+import Swal from 'sweetalert2';
 
 const btn = document.getElementById('button');
+const clear = document.getElementById('clear');
 const coin = document.getElementById('exchange');
 const list = document.getElementById('results');
 const BASE_URL = 'https://api.exchangerate.host/latest?base';
@@ -22,5 +24,12 @@ btn.addEventListener('click', (event) => {
   fetch(`${BASE_URL}=${coin.value}`)
     .then((Response) => Response.json())
     .then((data) => funcao(data.rates))
-    .catch();
+    .catch(() => Swal.fire({
+      title: 'Moeda nao encontrada',
+      text: 'Moeda nao encontrada',
+      icon: 'error',
+      confirmButtonText: 'Cool',
+    }));
 });
+
+clear.addEventListener('click', () => console.log());
