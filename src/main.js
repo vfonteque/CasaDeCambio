@@ -8,6 +8,6 @@ btn.addEventListener('click', (event) => {
   event.preventDefault();
   fetch(`${BASE_URL}=${coin.value}`)
     .then((Response) => Response.json())
-    .then((data) => {data})
+    .then((data) => console.log(data.rates))
     .catch();
 });
