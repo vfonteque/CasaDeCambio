@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+  text-align: center;
+}
+
+.seach {
+  border: solid red 2px;
+  display: flex;
+  justify-content: center;
+}
+
+.result {
+  border: solid green 2px;
+}
