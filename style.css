@@ -12,7 +12,3 @@ h1 {
   display: flex;
   justify-content: center;
 }
-
-.result {
-  border: solid green 2px;
-}
